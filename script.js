@@ -1,47 +1,41 @@
 // DARK MODE
-document.getElementById("darkToggle").onclick = function() {
+document.getElementById("darkToggle").onclick = () => {
   document.body.classList.toggle("dark");
 };
 
 // TYPING EFFECT
 const text = "Gita Ceasar";
-let index = 0;
-function typeEffect() {
-  if (index < text.length) {
-    document.querySelector(".typing").textContent += text.charAt(index);
-    index++;
-    setTimeout(typeEffect, 100);
+let i = 0;
+function typing() {
+  if (i < text.length) {
+    document.querySelector(".typing").textContent += text.charAt(i);
+    i++;
+    setTimeout(typing, 100);
   }
 }
-typeEffect();
+typing();
 
-// REVEAL ON SCROLL
-function reveal() {
-  let reveals = document.querySelectorAll(".reveal");
-  reveals.forEach(el => {
-    let windowHeight = window.innerHeight;
-    let elementTop = el.getBoundingClientRect().top;
-    if (elementTop < windowHeight - 100) {
+// REVEAL SCROLL
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
       el.classList.add("active");
     }
   });
-}
-window.addEventListener("scroll", reveal);
+});
 
 // SLIDER
-let slideIndex = 0;
+let index = 0;
 const slides = document.querySelectorAll(".slide");
 
 function showSlide(n) {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slideIndex = (n + slides.length) % slides.length;
-  slides[slideIndex].classList.add("active");
+  slides.forEach(s => s.classList.remove("active"));
+  index = (n + slides.length) % slides.length;
+  slides[index].classList.add("active");
 }
 
-document.querySelector(".next").onclick = () => showSlide(slideIndex + 1);
-document.querySelector(".prev").onclick = () => showSlide(slideIndex - 1);
+document.querySelector(".next").onclick = () => showSlide(index + 1);
+document.querySelector(".prev").onclick = () => showSlide(index - 1);
 
-// Auto Slide
-setInterval(() => {
-  showSlide(slideIndex + 1);
-}, 4000);
+// AUTO SLIDE
+setInterval(() => showSlide(index + 1), 4000);
