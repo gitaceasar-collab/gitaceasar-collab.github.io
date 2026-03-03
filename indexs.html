@@ -3,18 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Sederhana</title>
+    <title>Portofolio Gita Ceasar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Website Interaktif</h1>
-        <p>Klik tombol di bawah untuk mengubah warna background.</p>
-        
-        <button onclick="ubahWarna()">Ubah Warna</button>
-        <button onclick="tampilkanPesan()">Tampilkan Pesan</button>
-    </div>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h2 class="logo">MyPortfolio</h2>
+            <ul>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Halo, Saya <span>Gita Ceasar</span></h1>
+        <p>Mahasiswa Sistem Informasi | Web Developer</p>
+        <button onclick="scrollToProjects()">Lihat Proyek</button>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah mahasiswa yang tertarik pada pengembangan web, basis data,
+            dan pengujian perangkat lunak. Saya memiliki pengalaman dalam membuat
+            aplikasi berbasis HTML, CSS, JavaScript, dan MySQL.
+        </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <h2>Proyek Saya</h2>
+
+        <div class="project-card">
+            <h3>Sistem Peminjaman Buku</h3>
+            <p>Aplikasi berbasis database untuk mengelola data peminjaman buku.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Aplikasi ScholarLink</h3>
+            <p>Aplikasi manajemen data akademik dengan pengujian Black Box Testing.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Website Portofolio</h3>
+            <p>Website personal untuk menampilkan profil dan proyek.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Kontak</h2>
+        <p>Email: gitaceasar@email.com</p>
+        <p>Instagram: @gitaceasar</p>
+        <button onclick="kirimPesan()">Kirim Pesan</button>
+    </section>
+
+    <footer>
+        <p>© 2026 Gita Ceasar. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
