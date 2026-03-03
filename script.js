@@ -1,9 +1,4 @@
-// DARK MODE
-document.getElementById("darkToggle").onclick = () => {
-  document.body.classList.toggle("dark");
-};
-
-// TYPING EFFECT
+// Typing Effect
 const text = "Gita Ceasar";
 let i = 0;
 function typing() {
@@ -15,7 +10,7 @@ function typing() {
 }
 typing();
 
-// REVEAL SCROLL
+// Reveal on Scroll
 window.addEventListener("scroll", () => {
   document.querySelectorAll(".reveal").forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight - 100) {
@@ -24,7 +19,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// SLIDER
+// Slider
 let index = 0;
 const slides = document.querySelectorAll(".slide");
 
@@ -37,5 +32,4 @@ function showSlide(n) {
 document.querySelector(".next").onclick = () => showSlide(index + 1);
 document.querySelector(".prev").onclick = () => showSlide(index - 1);
 
-// AUTO SLIDE
 setInterval(() => showSlide(index + 1), 4000);
