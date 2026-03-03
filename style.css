@@ -1,30 +1,118 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    margin-top: 100px;
-}
-
-h1 {
+body {
+    background: #f4f6f9;
     color: #333;
 }
 
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    background-color: #3498db;
+/* Navbar */
+header {
+    background: #2c3e50;
+    padding: 15px 0;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
     color: white;
-    font-size: 16px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #1abc9c, #16a085);
+    color: white;
+}
+
+.hero span {
+    color: #ffeaa7;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background: #34495e;
+}
+
+/* Section */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects {
+    background: #ffffff;
+}
+
+.project-card {
+    background: #ecf0f1;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.contact button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #1abc9c;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #2980b9;
+.contact button:hover {
+    background: #16a085;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
